@@ -22,6 +22,7 @@
 		997C94AD1860D02100D6B689 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 997C948C1860D02100D6B689 /* UIKit.framework */; };
 		997C94B51860D02100D6B689 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 997C94B31860D02100D6B689 /* InfoPlist.strings */; };
 		997C94B71860D02100D6B689 /* NotesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 997C94B61860D02100D6B689 /* NotesTests.m */; };
+		997C94C21860EEDF00D6B689 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 997C94C11860EEDF00D6B689 /* LoginViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,8 @@
 		997C94B21860D02100D6B689 /* NotesTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NotesTests-Info.plist"; sourceTree = "<group>"; };
 		997C94B41860D02100D6B689 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		997C94B61860D02100D6B689 /* NotesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotesTests.m; sourceTree = "<group>"; };
+		997C94C01860EEDF00D6B689 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		997C94C11860EEDF00D6B689 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +127,8 @@
 				997C94A11860D02100D6B689 /* DetailViewController.m */,
 				997C94A31860D02100D6B689 /* Images.xcassets */,
 				997C948F1860D02100D6B689 /* Supporting Files */,
+				997C94C01860EEDF00D6B689 /* LoginViewController.h */,
+				997C94C11860EEDF00D6B689 /* LoginViewController.m */,
 			);
 			path = Notes;
 			sourceTree = "<group>";
@@ -258,6 +263,7 @@
 				997C949F1860D02100D6B689 /* MasterViewController.m in Sources */,
 				997C94951860D02100D6B689 /* main.m in Sources */,
 				997C94A21860D02100D6B689 /* DetailViewController.m in Sources */,
+				997C94C21860EEDF00D6B689 /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

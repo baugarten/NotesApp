@@ -7,6 +7,7 @@
 //
 
 #import "LoginViewController.h"
+#import "MasterViewController.h"
 
 @interface LoginViewController ()
 
@@ -35,4 +36,22 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)loginPressed:(UIButton *)sender {
+    if (self.username.text.length > 0 && self.password.text.length > 0) {
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        MasterViewController *myTableViewController = [storyboard  instantiateViewControllerWithIdentifier:@"NavigationController"];
+//MasterViewController *writtenNotes = [[MasterViewController alloc] init];
+//        UINavigationController *navigationController=[[UINavigationController alloc] initWithRootViewController:writtenNotes];
+
+        [self presentViewController:myTableViewController animated:YES completion:nil];
+        UIAlertView *alertsuccess = [[UIAlertView alloc] initWithTitle:@"Congrats" message:@"You are authorized"
+                                                        delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alertsuccess show];
+    }
+}
+
+-(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
+    [self.username resignFirstResponder];
+    [self.password resignFirstResponder];
+}
 @end
