@@ -33,6 +33,12 @@
         self.titleField.text = self.detailItem.title;
         self.bodyField.text = self.detailItem.body;
     }
+    [self.titleField addTarget:self action:@selector(textChanged:) forControlEvents:UIControlEventEditingChanged];
+}
+
+- (void)textChanged:(UITextField *)sender {
+    NSLog(@"OnTitleChange");
+    self.detailItem.title = sender.text;
 }
 
 - (void)viewDidLoad
@@ -48,15 +54,13 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)titleFieldTextChange:(id)sender {
-}
+/*- (IBAction)titleFieldTextChange:(UITextField *)view {
+    self.detailItem.title = view.text;
+}*/
 
 - (BOOL)textViewShouldEndEditing:(UITextView *)view {
-    NSLog(@"TextView End Editing");
+    self.detailItem.body = view.text;
     return TRUE;
 }
-- (BOOL)textViewShouldBeginEditing:(UITextView *)view {
-    NSLog(@"TextView Begin Editing");
-    return TRUE;
-}
+
 @end

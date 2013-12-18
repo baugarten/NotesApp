@@ -16,8 +16,8 @@
 
 @property (strong, nonatomic) Note *detailItem;
 
-- (IBAction)titleFieldTextChange:(id)sender;
 
 - (void)configureView;
+- (void)textChanged:(UITextField *)sender;
 
 @end
