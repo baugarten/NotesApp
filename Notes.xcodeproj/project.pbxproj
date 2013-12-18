@@ -23,6 +23,7 @@
 		997C94B51860D02100D6B689 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 997C94B31860D02100D6B689 /* InfoPlist.strings */; };
 		997C94B71860D02100D6B689 /* NotesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 997C94B61860D02100D6B689 /* NotesTests.m */; };
 		997C94C21860EEDF00D6B689 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 997C94C11860EEDF00D6B689 /* LoginViewController.m */; };
+		997C94C61862233A00D6B689 /* Note.m in Sources */ = {isa = PBXBuildFile; fileRef = 997C94C51862233A00D6B689 /* Note.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,8 @@
 		997C94B61860D02100D6B689 /* NotesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotesTests.m; sourceTree = "<group>"; };
 		997C94C01860EEDF00D6B689 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		997C94C11860EEDF00D6B689 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		997C94C41862233A00D6B689 /* Note.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Note.h; sourceTree = "<group>"; };
+		997C94C51862233A00D6B689 /* Note.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Note.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +121,7 @@
 		997C948E1860D02100D6B689 /* Notes */ = {
 			isa = PBXGroup;
 			children = (
+				997C94C31862231700D6B689 /* Models */,
 				997C94971860D02100D6B689 /* AppDelegate.h */,
 				997C94981860D02100D6B689 /* AppDelegate.m */,
 				997C949A1860D02100D6B689 /* Main.storyboard */,
@@ -160,6 +164,15 @@
 				997C94B31860D02100D6B689 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		997C94C31862231700D6B689 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				997C94C41862233A00D6B689 /* Note.h */,
+				997C94C51862233A00D6B689 /* Note.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,6 +275,7 @@
 				997C94991860D02100D6B689 /* AppDelegate.m in Sources */,
 				997C949F1860D02100D6B689 /* MasterViewController.m in Sources */,
 				997C94951860D02100D6B689 /* main.m in Sources */,
+				997C94C61862233A00D6B689 /* Note.m in Sources */,
 				997C94A21860D02100D6B689 /* DetailViewController.m in Sources */,
 				997C94C21860EEDF00D6B689 /* LoginViewController.m in Sources */,
 			);

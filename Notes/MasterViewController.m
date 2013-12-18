@@ -7,8 +7,8 @@
 //
 
 #import "MasterViewController.h"
-
 #import "DetailViewController.h"
+#import "Note.h"
 
 @interface MasterViewController () {
     NSMutableArray *_notes;
@@ -30,6 +30,7 @@
 
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
     self.navigationItem.rightBarButtonItem = addButton;
+    self.title = @"Notes";
 }
 
 - (void)didReceiveMemoryWarning
@@ -43,7 +44,7 @@
     if (!_notes) {
         _notes = [[NSMutableArray alloc] init];
     }
-    [_notes insertObject:[NSDate date] atIndex:0];
+    [_notes insertObject:[[Note alloc] initWithTitle:@"New Entry"] atIndex:0];
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
     [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
@@ -64,8 +65,8 @@
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
 
-    NSDate *object = _notes[indexPath.row];
-    cell.textLabel.text = [object description];
+    Note *note = _notes[indexPath.row];
+    cell.textLabel.text = note.title;
     return cell;
 }
 
@@ -103,12 +104,10 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    NSLog(@"prepareForSeque");
-    NSLog([segue identifier]);
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        NSDate *object = _notes[indexPath.row];
-        [[segue destinationViewController] setDetailItem:object];
+        Note *note = _notes[indexPath.row];
+        [[segue destinationViewController] setDetailItem:note];
     }
 }
 

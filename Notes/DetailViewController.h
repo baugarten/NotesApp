@@ -7,10 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Note.h"
 
-@interface DetailViewController : UIViewController
+@interface DetailViewController : UIViewController <UITextViewDelegate>
 
-@property (strong, nonatomic) id detailItem;
+@property (weak, nonatomic) IBOutlet UITextField *titleField;
+@property (weak, nonatomic) IBOutlet UITextView *bodyField;
 
-@property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
+@property (strong, nonatomic) Note *detailItem;
+
+- (IBAction)titleFieldTextChange:(id)sender;
+
+- (void)configureView;
+
 @end
